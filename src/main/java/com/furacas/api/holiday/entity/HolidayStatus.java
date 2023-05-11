@@ -8,27 +8,17 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum HolidayStatus {
 
-    /**
-     * 工作日
-     */
-    WORKDAY(1),
+  /** 工作日 */
+  WORKDAY(1),
 
+  /** 补班 */
+  MAKE_UP(2),
 
-    /**
-     * 补班
-     */
-    MAKE_UP(2),
+  /** 假期 */
+  HOLIDAY(3),
 
-    /**
-     * 假期
-     */
-    HOLIDAY(3),
+  /** 周末， 补班优先级高于周末 */
+  WEEKEND(4);
 
-    /**
-     * 周末， 补班优先级高于周末
-     */
-    WEEKEND(4);
-
-    @JsonValue
-    private Integer code;
+  @JsonValue private Integer code;
 }

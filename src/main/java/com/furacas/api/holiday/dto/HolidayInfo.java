@@ -1,29 +1,28 @@
 package com.furacas.api.holiday.dto;
 
 import com.furacas.api.holiday.entity.HolidayStatus;
-import lombok.Data;
-
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import lombok.Data;
 
 @Data
 public class HolidayInfo {
 
-    private Integer year;
+  private Integer year;
 
-    private Integer month;
+  private Integer month;
 
-    private Integer day;
+  private Integer day;
 
-    private Integer week;
+  private Integer week;
 
-    private HolidayStatus status;
+  private HolidayStatus status;
 
-    private String name;
+  private String name;
 
-    private Integer rest;
+  private Integer rest;
 
-    public Long getRest(){
-        return ChronoUnit.DAYS.between(LocalDate.now(), LocalDate.of(year,month,day));
-    }
+  public Long getRest() {
+    return ChronoUnit.DAYS.between(LocalDate.now(), LocalDate.of(year, month, day));
+  }
 }

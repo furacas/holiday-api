@@ -8,8 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class HolidayApiApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(HolidayApiApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(HolidayApiApplication.class, args);
+  }
 }
